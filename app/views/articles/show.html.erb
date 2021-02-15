@@ -1,0 +1,20 @@
+<div class="info-bar">
+  <h1><%= @article.title.capitalize %></h1>
+
+
+  <%= link_to edit_article_path do %>
+  <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+  <% end %>
+
+  <%= link_to article_path(params[:id]), method: :delete do %>
+  <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
+  <% end %>
+
+
+</div>
+
+<p class="show-content"><%= @article.content %></p>
+
+<div class="footer">
+  <p><%= link_to "Main Page", articles_path %></p>
+</div>

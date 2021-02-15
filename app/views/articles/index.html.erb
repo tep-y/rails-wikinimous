@@ -1,0 +1,7 @@
+
+
+  <% @articles.each do |article| %>
+    <h1><%= link_to article.title.capitalize, article_path(article) %></h1>
+    <p class="index-content"><%= article.content %></p>
+  <% end %>
+
